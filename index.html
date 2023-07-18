@@ -1,10 +1,463 @@
 <!DOCTYPE html>
-<html>
-<body>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Multi Step Form</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/css_generated.css" />
+    <link rel="stylesheet" href="css/personaldetails.css" />
 
-<h1>My First Heading</h1>
-<p>My first paragraph.</p>
-<h2>My second paragraph</h2>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <form id="myForm" action="" method="post" autocomplete="off">
+      <h1 align="center">Register</h1>
 
-</body>
+      <div class="step-wrapper">
+        <span class="step" id="step-1" onclick="navigateToStep(1)"
+          ><i class="fas fa-user"></i
+        ></span>
+        <span class="step" id="step-2" onclick="navigateToStep(2)"
+          ><i class="fas fa-map-marked-alt"></i
+        ></span>
+        <span class="step" id="step-3" onclick="navigateToStep(3)"
+          ><i class="fas fa-home"></i
+        ></span>
+        <span class="step" id="step-4" onclick="navigateToStep(4)"
+          ><i class="fas fa-university"></i
+        ></span>
+        <span class="step" id="step-5" onclick="navigateToStep(5)"
+          ><i class="fas fa-briefcase"></i
+        ></span>
+        <span class="step" id="step-6" onclick="navigateToStep(6)"
+          ><i class="fas fa-money-bill-wave"></i
+        ></span>
+        <span class="step" id="step-7" onclick="navigateToStep(7)"
+          ><i class="fas fa-file-alt"></i
+        ></span>
+      </div>
+
+      <div class="tab" id="tab-1">
+        <p>Personal Details:</p>
+
+        <div>
+          <!--First Row-->
+          <div class="row">
+            <div class="col">
+              <label for="firstname">First Name:</label>
+              <input
+                type="text"
+                id="firstname"
+                placeholder="First Name"
+                name="firstname"
+                required
+              />
+              <span class="error-message" id="firstname-error"></span>
+            </div>
+            <div class="col">
+              <label for="middlename">Middle Name:</label>
+              <input
+                type="text"
+                id="middlename"
+                placeholder="Middle Name"
+                name="middlename"
+              />
+            </div>
+            <div class="col">
+              <label for="lastname">Last Name:</label>
+              <input
+                type="text"
+                id="lastname"
+                placeholder="Last Name"
+                name="lastname"
+                required
+              />
+              <span class="error-message" id="lastname-error"></span>
+            </div>
+          </div>
+
+          <!--Second Row-->
+          <div class="row">
+            <div class="col">
+              <label for="firstname">First Name:</label>
+              <input
+                type="text"
+                id="firstname"
+                placeholder="First Name"
+                name="firstname"
+                required
+              />
+              <span class="error-message" id="firstname-error"></span>
+            </div>
+            <div class="col">
+              <label for="middlename">Middle Name:</label>
+              <input
+                type="text"
+                id="middlename"
+                placeholder="Middle Name"
+                name="middlename"
+              />
+            </div>
+            <div class="col">
+              <label for="lastname">Last Name:</label>
+              <input
+                type="text"
+                id="lastname"
+                placeholder="Last Name"
+                name="lastname"
+                required
+              />
+              <span class="error-message" id="lastname-error"></span>
+            </div>
+          </div>
+
+          <!--Third Row-->
+          <div class="row">
+            <div class="col">
+              <label for="firstname">First Name:</label>
+              <input
+                type="text"
+                id="firstname"
+                placeholder="First Name"
+                name="firstname"
+                required
+              />
+              <span class="error-message" id="firstname-error"></span>
+            </div>
+            <div class="col">
+              <label for="middlename">Middle Name:</label>
+              <input
+                type="text"
+                id="middlename"
+                placeholder="Middle Name"
+                name="middlename"
+              />
+            </div>
+            <div class="col">
+              <label for="lastname">Last Name:</label>
+              <input
+                type="text"
+                id="lastname"
+                placeholder="Last Name"
+                name="lastname"
+                required
+              />
+              <span class="error-message" id="lastname-error"></span>
+            </div>
+          </div>
+
+          <!--Fourth Row-->
+          <div class="row">
+            <div class="col">
+              <label for="firstname">First Name:</label>
+              <input
+                type="text"
+                id="firstname"
+                placeholder="First Name"
+                name="firstname"
+                required
+              />
+              <span class="error-message" id="firstname-error"></span>
+            </div>
+            <div class="col">
+              <label for="middlename">Middle Name:</label>
+              <input
+                type="text"
+                id="middlename"
+                placeholder="Middle Name"
+                name="middlename"
+              />
+            </div>
+            <div class="col">
+              <label for="lastname">Last Name:</label>
+              <input
+                type="text"
+                id="lastname"
+                placeholder="Last Name"
+                name="lastname"
+                required
+              />
+              <span class="error-message" id="lastname-error"></span>
+            </div>
+          </div>
+
+          <!--Fifth Row-->
+          <div class="row">
+            <div class="col">
+              <label for="firstname">First Name:</label>
+              <input
+                type="text"
+                id="firstname"
+                placeholder="First Name"
+                name="firstname"
+                required
+              />
+              <span class="error-message" id="firstname-error"></span>
+            </div>
+            <div class="col">
+              <label for="middlename">Middle Name:</label>
+              <input
+                type="text"
+                id="middlename"
+                placeholder="Middle Name"
+                name="middlename"
+              />
+            </div>
+            <div class="col">
+              <label for="lastname">Last Name:</label>
+              <input
+                type="text"
+                id="lastname"
+                placeholder="Last Name"
+                name="lastname"
+                required
+              />
+              <span class="error-message" id="lastname-error"></span>
+            </div>
+          </div>
+
+          <!--Sixth Row-->
+          <div class="row">
+            <div class="col">
+              <label for="firstname">First Name:</label>
+              <input
+                type="text"
+                id="firstname"
+                placeholder="First Name"
+                name="firstname"
+                required
+              />
+              <span class="error-message" id="firstname-error"></span>
+            </div>
+            <div class="col">
+              <label for="middlename">Middle Name:</label>
+              <input
+                type="text"
+                id="middlename"
+                placeholder="Middle Name"
+                name="middlename"
+              />
+            </div>
+            <div class="col">
+              <label for="lastname">Last Name:</label>
+              <input
+                type="text"
+                id="lastname"
+                placeholder="Last Name"
+                name="lastname"
+                required
+              />
+              <span class="error-message" id="lastname-error"></span>
+            </div>
+          </div>
+
+          <!--Seventh Row-->
+          <div class="row">
+            <div class="col">
+              <label for="firstname">First Name:</label>
+              <input
+                type="text"
+                id="firstname"
+                placeholder="First Name"
+                name="firstname"
+                required
+              />
+              <span class="error-message" id="firstname-error"></span>
+            </div>
+            <div class="col">
+              <label for="middlename">Middle Name:</label>
+              <input
+                type="text"
+                id="middlename"
+                placeholder="Middle Name"
+                name="middlename"
+              />
+            </div>
+            <div class="col">
+              <label for="lastname">Last Name:</label>
+              <input
+                type="text"
+                id="lastname"
+                placeholder="Last Name"
+                name="lastname"
+                required
+              />
+              <span class="error-message" id="lastname-error"></span>
+            </div>
+          </div>
+
+          <!--Eigth Row-->
+          <div class="row">
+            <div class="col">
+              <label for="firstname">First Name:</label>
+              <input
+                type="text"
+                id="firstname"
+                placeholder="First Name"
+                name="firstname"
+                required
+              />
+              <span class="error-message" id="firstname-error"></span>
+            </div>
+            <div class="col">
+              <label for="middlename">Middle Name:</label>
+              <input
+                type="text"
+                id="middlename"
+                placeholder="Middle Name"
+                name="middlename"
+              />
+            </div>
+            <div class="col">
+              <label for="lastname">Last Name:</label>
+              <input
+                type="text"
+                id="lastname"
+                placeholder="Last Name"
+                name="lastname"
+                required
+              />
+              <span class="error-message" id="lastname-error"></span>
+            </div>
+          </div>
+        </div>
+
+        <!--Family Details-->
+        <p>Family Details:</p>
+        <div>
+          <div class="row">
+            <div class="col">
+              <label for="fathername">Father's Name:</label>
+              <input
+                type="text"
+                id="fathername"
+                placeholder="Father's Name"
+                name="fathername"
+              />
+            </div>
+            <div class="col">
+              <label for="mothername">Mother's Name:</label>
+              <input
+                type="text"
+                id="mothername"
+                placeholder="Mother's Name"
+                name="mothername"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="navigateToStep(2)">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-2">
+        <p>Abroad Residence Details:</p>
+        <!-- Add fields for abroad residence details -->
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="navigateToStep(1)">Previous</div>
+          <div class="index-btn" onclick="navigateToStep(3)">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-3">
+        <p>Address Details:</p>
+        <!-- Add fields for address details -->
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="navigateToStep(2)">Previous</div>
+          <div class="index-btn" onclick="navigateToStep(4)">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-4">
+        <p>Bank Details:</p>
+        <!-- Add fields for bank details -->
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="navigateToStep(3)">Previous</div>
+          <div class="index-btn" onclick="navigateToStep(5)">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-5">
+        <p>Occupation Details:</p>
+        <!-- Add fields for occupation details -->
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="navigateToStep(4)">Previous</div>
+          <div class="index-btn" onclick="navigateToStep(6)">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-6">
+        <p>Money Laundering Details:</p>
+        <!-- Add fields for money laundering details -->
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="navigateToStep(5)">Previous</div>
+          <div class="index-btn" onclick="navigateToStep(7)">Next</div>
+        </div>
+      </div>
+
+      <div class="tab" id="tab-7">
+        <p>Documentation Details:</p>
+        <!-- Add fields for documentation details -->
+        <div class="index-btn-wrapper">
+          <div class="index-btn" onclick="navigateToStep(6)">Previous</div>
+          <button
+            class="index-btn"
+            type="submit"
+            name="submit"
+            style="background: blue"
+          >
+            Submit
+          </button>
+        </div>
+      </div>
+    </form>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script>
+      // Default tab
+      $(".tab").css("display", "none");
+      $("#tab-1").css("display", "block");
+      $("#step-1").addClass("active");
+
+      function navigateToStep(step) {
+        // Validate if press next button
+        if (step > 1) {
+          var currentTab = step - 1;
+          x = $("#tab-" + currentTab);
+          y = $(x).find("input[required]");
+          var errorMessages = "";
+          for (i = 0; i < y.length; i++) {
+            if (y[i].value == "") {
+              var fieldName = $(y[i]).attr("name");
+              $("#" + fieldName + "-error").html(fieldName + " is required.");
+              errorMessages += fieldName + " is required.<br>";
+            }
+          }
+          if (errorMessages !== "") {
+            return false;
+          }
+        }
+
+        // Progress bar
+        $(".step").removeClass("active");
+        for (i = 1; i <= step; i++) {
+          $("#step-" + i).addClass("active");
+        }
+
+        // Clear error messages
+        $(".error-message").html("");
+
+        // Switch tab
+        $(".tab").css("display", "none");
+        $("#tab-" + step).css("display", "block");
+        $("input").css("background", "#fff");
+      }
+    </script>
+  </body>
 </html>
