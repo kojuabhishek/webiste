@@ -139,7 +139,7 @@
          
             <div class="form-row">
               <label>Gender:</label>
-              
+             
               <input type="radio" name="gender" value="male" />
               <label>Male</label>
               <input type="radio" name="gender" value="female" />
@@ -182,8 +182,8 @@
             
             <div class="col">
            
-              <label for="ctznIssuedFrom">Citizenship Issued From:*</label>
-              
+              <label for="ctznIssuedFrom laa">Citizenship Issued From:*</label>
+              <div class="d">
               <select id="ctznIssuedFrom" name="ctznIssuedFrom">
                 <option value="ktm">Kathmandu</option>
                 <option value="bkt">Bhaktapur</option>
@@ -191,7 +191,7 @@
                 <!-- Add more options as needed -->
               </select>
 
-             
+            </div>
        
               
               <span class="error-message" id="ctznIssuedFrom"></span>
@@ -228,13 +228,14 @@
             </div>
             <div class="col">
               <label for="passportIssuedFrom">Passport Issued From :</label>
+              <div class="d">
               <select id="passportIssuedFrom" name="passportIssuedFrom">
                 <option value="ktm">Kathmandu</option>
                 <option value="bkt">Bhaktapur</option>
                 <option value="ltp">Lalitpur</option>
                 <!-- Add more options as needed -->
               </select>
-
+            </div>
             </div>
             <div class="col">
               <label for="PassportissuedDate">Passport issued Date:</label>
@@ -323,19 +324,84 @@
            <!--FD second row-->
            <div class="row">
             <div class="col">
-            <label>Is Married?*</label>
+            <label for="marital-status">Is Married?*</label>
             <div class="form-row">
               <div class="row">
-                <input type="radio" name="gender" value="unmarried" />
+                <input type="radio" name="marital-status" value="unmarried"  onclick="toggleInputFields()" />
                 <label>Unmarried</label>
-                <input type="radio" name="gender" value="married" />
+                <input type="radio" name="marital-status" value="married"   onclick="toggleInputFields()"/>
                 <label>Married</label>
-                <input type="radio" name="gender" value="other" />
+                <input type="radio" name="marital-status" value="other"   onclick="toggleInputFields()"/>
                 <label>Other</label>
 
               </div>
             </div>
           </div> 
+            </div>
+            <div id="spouse-details" style="display: none">
+              <h3>Spouse Details:</h3>
+              <div class="row">
+                <div class="col">
+                  <label for="spousename">Spouse's Name:*</label>
+                  <input
+                    type="text"
+                    id="spousename"
+                    placeholder="Spouse Name"
+                    name="spousename"
+                    required
+                  />
+                  <span class="error-message" id="spousename-error"></span>
+                </div>
+                <div class="col">
+                  <label for="fatherinlaw">Father-In-Law's Name:</label>
+                  <input
+                    type="text"
+                    id="fatherinlaw"
+                    placeholder="Father-In-Law Name"
+                    name="fatherinlaw"
+                    required
+                  />
+                  <span class="error-message" id="fatherinlaw-error"></span>
+                </div>
+                <div class="col">
+                  <label for="lastname">Mother-In-Law Name:*</label>
+                  <input
+                    type="text"
+                    id="motherinlaw"
+                    placeholder="Mother-In-Law Name"
+                    name="motherinlaw"
+                    required
+                  />
+                  <span class="error-message" id="motherinlaw-error"></span>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col">
+                  <label for="spousename">Son's Name:*</label>
+                  <input
+                    type="text"
+                    id="sonname"
+                    placeholder="Son's Name"
+                    name="sonname"
+                    required
+                  />
+                  <span class="error-message" id="sonname-error"></span>
+                </div>
+               
+                <div class="col">
+                  <label for="lastname">Daughter's Name:*</label>
+                  <input
+                    type="text"
+                    id="daughtername"
+                    placeholder="Daughter's Name"
+                    name="daughtername"
+                    required
+                  />
+                  <span class="error-message" id="daughtername-error"></span>
+                </div>
+              </div>
+
             </div>
             
             <br>
@@ -370,7 +436,113 @@
 
       <div class="tab" id="tab-2">
         <p>Abroad Residence Details:</p>
-        <!-- Add fields for abroad residence details -->
+                    <!--FD third row-->
+                    <label>Are you Non Resident Nepalese?*:</label>
+                    <div class="row">
+                      <div class="col">
+                     
+                      <div class="form-row">
+                        <div class="row">
+                          <input
+                          type="radio"
+                          name="nrn"
+                          value="yes"
+                          checked
+                          class="radio-1"
+                          style="margin-right: 10px"
+                          onclick="showDetails()"
+                        />
+                        Yes
+                        <input
+                          type="radio"
+                          name="nrn"
+                          value="no"
+                          style="margin-left: 50px"
+                          onclick="hideDetails()"
+                        />
+                        No
+                          
+          
+                        </div>
+                      </div>
+                    </div> 
+                      </div>
+
+                      <!--First Row-->
+          <div class="row" id="secondRow">
+            <div class="col">
+              <label for="nrncode">NRN Code No:*</label>
+              <input
+                type="text"
+                id="nrncode"
+                placeholder="Enter NRN Code"
+                name="nrncode"
+                required
+              />
+              <span class="error-message" id="nrncode-error"></span>
+            </div>
+            <div class="col">
+              <label for="nrncity">City:*</label>
+              <input
+                type="text"
+                id="nrncity"
+                placeholder="Enter City Name"
+                name="nrncity"
+                required
+              />
+              <span class="error-message" id="nrncity-error"></span>
+
+            </div>
+            <div class="col">
+              <label for="lastname">Province:*</label>
+              <input
+                type="text"
+                id="nrnprovince"
+                placeholder="Enter Province Name"
+                name="nrnprovince"
+                required
+              />
+              <span class="error-message" id="nrnprovince-error"></span>
+            </div>
+          </div>
+                    
+                            <!--First Row-->
+                            <div class="row" id="thirdRow">
+                              <div class="col">
+                                <label for="nrnCountry">Country:*</label>
+                                <input
+                                  type="text"
+                                  id="nrnCountry"
+                                  placeholder="Enter Country Name"
+                                  name="nrnCountry"
+                                  required
+                                />
+                                <span class="error-message" id="nrnCountry-error"></span>
+                              </div>
+                              <div class="col">
+                                <label for="nrnCompany">NRN Company:*</label>
+                                <input
+                                  type="text"
+                                  id="nrnCompany"
+                                  placeholder="Enter Company Name"
+                                  name="nrnCompany"
+                                />
+                                <span class="error-message" id="nrnCompany-error"></span>
+                              </div>
+                              <div class="col">
+                                <label for="designation">Designation:*</label>
+                                <input
+                                  type="text"
+                                  id="designation"
+                                  placeholder="Enter Designation"
+                                  name="designation"
+                                  required
+                                />
+                                <span class="error-message" id="designation-error"></span>
+                              </div>
+                            </div>
+                                    
+
         <div class="index-btn-wrapper">
           <div class="index-btn" onclick="navigateToStep(1)">Previous</div>
           <div class="index-btn" onclick="navigateToStep(3)">Next</div>
@@ -379,7 +551,287 @@
 
       <div class="tab" id="tab-3">
         <p>Address Details:</p>
-        <!-- Add fields for address details -->
+
+        <h3>Permanent Address:</h3>
+
+        <!-- First Row -->
+<div class="row">
+  <div class="col">
+    <label for="country">Country:*</label>
+    <div class="d">
+      <select id="country" name="country" required>
+        <option value="">Select Country</option>
+        <option value="nep">Nepal</option>
+        <option value="ind">India</option>
+        <option value="usa">USA</option>
+        <!-- Add more options as needed -->
+      </select>
+      
+    </div>
+   
+    <span class="error-message" id="country-error"></span>
+  </div>
+  <div class="col">
+    <label for="province">Province:*</label>
+    <div class="d">
+      <select id="province" name="province" required>
+        <option value="" >Select Province</option>
+        <option value="province1">Province 1</option>
+        <option value="province2">Province 2</option>
+        <option value="province3">Province 3</option>
+        <!-- Add more options as needed -->
+      </select>
+
+    </div>
+ 
+   
+    <span class="error-message" id="province-error"></span>
+  </div>
+  <div class="col">
+    <label for="district">District:*</label>
+    <div class="d">
+      <select id="district" name="district" required>
+        <option value="" >Select District</option>
+        <option value="district1">District 1</option>
+        <option value="district2">District 2</option>
+        <option value="district3">District 3</option>
+        <!-- Add more options as needed -->
+      </select>
+
+    </div>
+
+    <span class="error-message" id="district-error"></span>
+  </div>
+</div>
+
+         <!-- Second Row -->
+         <div class="row">
+          <div class="col">
+            <label for="country">Country:*</label>
+            <div class="d">
+              <select id="country" name="country" required>
+                <option value="">Select Country</option>
+                <option value="nep">Nepal</option>
+                <option value="ind">India</option>
+                <option value="usa">USA</option>
+                <!-- Add more options as needed -->
+              </select>
+              
+            </div>
+           
+            <span class="error-message" id="country-error"></span>
+          </div>
+
+          <div class="col">
+            <label for="wardno">Ward No:*</label>
+            <input
+              type="text"
+              id="wardno"
+              placeholder="Ward Number"
+              name="wardno"
+              required
+            />
+            <span class="error-message" id="wardno-error"></span>
+          </div>
+
+          <div class="col">
+            <label for="street">Street/Tole:*</label>
+            <input
+              type="text"
+              id="street"
+              placeholder="Enter Street"
+              name="street"
+              required
+            />
+            <span class="error-message" id="street-error"></span>
+          </div>
+        
+        </div>
+
+        <!--Third Row-->
+        <div class="row">
+          <div class="col">
+            <label for="mobile">Phone No:*</label>
+            <input
+              type="text"
+              id="phone"
+              placeholder="Enter phone"
+              name="phone"
+              required
+            />
+            <span class="error-message" id="phone-error"></span>
+          </div>
+          <div class="col">
+            <label for="email">Fax:*</label>
+            <input
+              type="text"
+              id="fax"
+              placeholder="Enter Fax"
+              name="fax"
+              required
+            />
+            <span class="error-message" id="fax-error"></span>
+          </div>
+          
+        </div>
+
+        <label>Temporary Address Same As Permanent Address?*:</label>
+                    <div class="row">
+                      <div class="col">
+                     
+                      <div class="form-row">
+                        <div class="row">
+                          <input
+              type="radio"
+              id="yes"
+              name="radioGroup"
+              value="yes"
+              onclick="toggleAddressFields(false)"
+            />
+            <label for="yes">Yes</label>
+
+            <input
+              type="radio"
+              id="no"
+              name="radioGroup"
+              value="no"
+              onclick="toggleAddressFields(true)"
+            />
+            <label for="no">No</label>
+                          
+          
+                        </div>
+                      </div>
+                    </div> 
+                      </div>
+
+                      <div id="additional-fields" style="display: none">
+                        <p>Temporary Address:</p>
+
+                        <!-- First Row -->
+                <div class="row">
+                  <div class="col">
+                    <label for="country">Country:*</label>
+                    <div class="d">
+                      <select id="country" name="country" required>
+                        <option value="">Select Country</option>
+                        <option value="nep">Nepal</option>
+                        <option value="ind">India</option>
+                        <option value="usa">USA</option>
+                        <!-- Add more options as needed -->
+                      </select>
+                      
+                    </div>
+                   
+                    <span class="error-message" id="country-error"></span>
+                  </div>
+                  <div class="col">
+                    <label for="province">Province:*</label>
+                    <div class="d">
+                      <select id="province" name="province" required>
+                        <option value="" >Select Province</option>
+                        <option value="province1">Province 1</option>
+                        <option value="province2">Province 2</option>
+                        <option value="province3">Province 3</option>
+                        <!-- Add more options as needed -->
+                      </select>
+                
+                    </div>
+                 
+                   
+                    <span class="error-message" id="province-error"></span>
+                  </div>
+                  <div class="col">
+                    <label for="district">District:*</label>
+                    <div class="d">
+                      <select id="district" name="district" required>
+                        <option value="" >Select District</option>
+                        <option value="district1">District 1</option>
+                        <option value="district2">District 2</option>
+                        <option value="district3">District 3</option>
+                        <!-- Add more options as needed -->
+                      </select>
+                
+                    </div>
+                
+                    <span class="error-message" id="district-error"></span>
+                  </div>
+                </div>
+                
+                         <!-- Second Row -->
+                         <div class="row">
+                          <div class="col">
+                            <label for="country">Country:*</label>
+                            <div class="d">
+                              <select id="country" name="country" required>
+                                <option value="">Select Country</option>
+                                <option value="nep">Nepal</option>
+                                <option value="ind">India</option>
+                                <option value="usa">USA</option>
+                                <!-- Add more options as needed -->
+                              </select>
+                              
+                            </div>
+                           
+                            <span class="error-message" id="country-error"></span>
+                          </div>
+                
+                          <div class="col">
+                            <label for="wardno">Ward No:*</label>
+                            <input
+                              type="text"
+                              id="wardno"
+                              placeholder="Ward Number"
+                              name="wardno"
+                              required
+                            />
+                            <span class="error-message" id="wardno-error"></span>
+                          </div>
+                
+                          <div class="col">
+                            <label for="street">Street/Tole:*</label>
+                            <input
+                              type="text"
+                              id="street"
+                              placeholder="Enter Street"
+                              name="street"
+                              required
+                            />
+                            <span class="error-message" id="street-error"></span>
+                          </div>
+                        
+                        </div>
+                
+                        <!--Third Row-->
+                        <div class="row">
+                          <div class="col">
+                            <label for="mobile">Phone No:*</label>
+                            <input
+                              type="text"
+                              id="phone"
+                              placeholder="Enter phone"
+                              name="phone"
+                              required
+                            />
+                            <span class="error-message" id="phone-error"></span>
+                          </div>
+                          <div class="col">
+                            <label for="email">Fax:*</label>
+                            <input
+                              type="text"
+                              id="fax"
+                              placeholder="Enter Fax"
+                              name="fax"
+                              required
+                            />
+                            <span class="error-message" id="fax-error"></span>
+                          </div>
+                          
+                        </div>
+                
+                      
+                      </div>
+      
         <div class="index-btn-wrapper">
           <div class="index-btn" onclick="navigateToStep(2)">Previous</div>
           <div class="index-btn" onclick="navigateToStep(4)">Next</div>
@@ -388,6 +840,67 @@
 
       <div class="tab" id="tab-4">
         <p>Bank Details:</p>
+
+        <div class="row">
+          <div class="col">
+            <label for="account-type">Type of Account:*</label>
+            <div class="d">
+              <select id="account-type" name="account-type" required>
+                <option value="">Select Account Type</option>
+                <option value="savings">Savings Account</option>
+                <option value="checking">Checking Account</option>
+                <option value="credit">Credit Card</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <span class="error-message" id="account-type-error"></span>
+          </div>
+          <div class="col">
+            <label for="bank-name">Name of Bank:*</label>
+            <div class="d">
+              <select id="bank-name" name="bank-name" required>
+                <option value="">Select Bank</option>
+                <option value="bank1">Bank 1</option>
+                <option value="bank2">Bank 2</option>
+                <option value="bank3">Bank 3</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <span class="error-message" id="bank-name-error"></span>
+          </div>
+          <div class="col">
+            <label for="accountNo">Bank Account No:*</label>
+            <input
+              type="text"
+              id="accountNo"
+              placeholder="Enter Bank Account Number"
+              name="accountNo"
+              required
+            />
+            <span class="error-message" id="accountNo-error"></span>
+          </div>
+
+        </div>
+
+        <div class="row">
+          
+     
+          <div class="col">
+            <label for="accountNo">Branch Address:*</label>
+            <input
+              type="text"
+              id="branchAddress"
+              placeholder="Enter Branch Address"
+              name="branchAddress"
+              required
+            />
+            <span class="error-message" id="branchAddress"></span>
+          </div>
+
+        </div>
+        
+        
+
         <!-- Add fields for bank details -->
         <div class="index-btn-wrapper">
           <div class="index-btn" onclick="navigateToStep(3)">Previous</div>
@@ -397,6 +910,186 @@
 
       <div class="tab" id="tab-5">
         <p>Occupation Details:</p>
+
+        <!--First Row-->
+        <div class="row">
+          <div class="col">
+            <label for="occupation">Occupation:*</label>
+            <div class="d">
+              <select id="occupation" name="occupation" required>
+                <option value="">Select Occupation Type</option>
+                <option value="teacher">Teacher</option>
+                <option value="agriculture">Agriculture</option>
+                <option value="business">Business</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <span class="error-message" id="occupation-error"></span>
+          </div>
+          <div class="col">
+            <label for="typesOfBusiness">Types Of Business:*</label>
+            <div class="d">
+              <select id="typesOfBusiness" name="typesOfBusiness" required>
+                <option value="">Select Type Of Business</option>
+                <option value="type1">Social</option>
+                <option value="type2">Service Oriented</option>
+                <option value="type3">Profit</option>
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <span class="error-message" id="typesOfBusiness"></span>
+          </div>
+          <div class="col">
+            <label for="occupationPan">PAN No:</label>
+            <input
+              type="text"
+              id="occupationPan"
+              placeholder="Enter Bank Account Number"
+              name="occupationPan"
+              required
+            />
+            <span class="error-message" id="occupationPan-error"></span>
+          </div>
+
+        </div>
+
+        <!--Second Row-->
+        <div class="row">
+          <div class="col">
+            <label for="organizationName">Organization Name:</label>
+            <input
+              type="text"
+              id="organizationName"
+              placeholder="Enter Organization Name"
+              name="organizationName"
+              required
+            />
+            <span class="error-message" id="organizationName-error"></span>
+          </div>
+          <div class="col">
+            <label for="organizationAddress">Address:</label>
+            <input
+              type="text"
+              id="organizationAddress"
+              placeholder="Enter Address"
+              name="organizationAddress"
+              required
+            />
+            <span class="error-message" id="organizationAddress-error"></span>
+          </div>
+          <div class="col">
+            <label for="designation">Designation:*</label>
+            <div class="d">
+              <select id="designation" name="designation" required>
+                <option value="">Select Designation</option>
+                <option value="ceo">CEO</option>
+                <option value="manager">Manager</option>
+                
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <span class="error-message" id="designation-error"></span>
+          </div>
+          
+        
+
+        </div>
+
+        <!--Third Row-->
+        <div class="row">
+          <div class="col">
+            <label for="employeeId">ID No. Of Employee:</label>
+            <input
+              type="text"
+              id="employeeId"
+              placeholder="Enter Employee Id"
+              name="employeeId"
+              required
+            />
+            <span class="error-message" id="employeeId-error"></span>
+          </div>
+       
+          <div class="col">
+            <label for="financialDetails">Financial Details:*</label>
+            <div class="d">
+              <select id="financialDetails" name="financialDetails" required>
+                <option value="">Select Designation</option>
+                <option value="60k">Upto 60000</option>
+                <option value="70k">Upto 70000</option>
+                
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <span class="error-message" id="financialDetails-error"></span>
+          </div>
+          
+        
+
+        </div>
+
+        <!--Fourth Row-->
+        <label>Involved in Investment Companies Which Are Established For Securities Trading?*:</label>
+        <div class="row">
+          <div class="col">
+         
+          <div class="form-row">
+            <div class="row">
+              <input
+              type="radio"
+              name="involved"
+              value="yes"
+              checked
+              class="radio-1"
+              style="margin-right: 10px"
+              onclick="showDetailsOccupation()"
+            />
+            Yes
+            <input
+              type="radio"
+              name="involved"
+              value="no"
+              style="margin-left: 50px"
+              onclick="hideDetailsOccupation()"
+            />
+            No
+              
+
+            </div>
+          </div>
+        </div> 
+          </div>
+
+          <div class="row" id="secondRowOccupation">
+            <div class="col">
+              <label for="securityCompanyName">Name Of Company:*</label>
+              <input
+                type="text"
+                id="securityCompanyName"
+                placeholder="Enter Company Name"
+                name="securityCompanyName"
+                required
+              />
+              <span class="error-message" id="securityCompanyName"></span>
+            </div>
+         
+            <div class="col">
+              <label for="secuirtyDesignation">Designation:*</label>
+              <div class="d">
+                <select id="secuirtyDesignation" name="secuirtyDesignation" required>
+                  <option value="">Select Designation</option>
+                  <option value="director">Director</option>
+                  <option value="employee">Employee</option>
+                  
+                  <!-- Add more options as needed -->
+                </select>
+              </div>
+              <span class="error-message" id="financialDetails-error"></span>
+            </div>
+            
+          
+  
+          </div>
+
         <!-- Add fields for occupation details -->
         <div class="index-btn-wrapper">
           <div class="index-btn" onclick="navigateToStep(4)">Previous</div>

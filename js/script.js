@@ -1,4 +1,4 @@
-
+/*
 // Default tab
 $(".tab").css("display", "none");
 $("#tab-1").css("display", "block");
@@ -37,3 +37,27 @@ function navigateToStep(step) {
   $("#tab-" + step).css("display", "block");
   $("input").css("background", "#fff");
 }
+*/
+
+
+  // Default tab
+  $(".tab").css("display", "none");
+  $("#tab-1").css("display", "block");
+  $("#step-1").addClass("active");
+
+  function navigateToStep(step) {
+    // Progress bar
+    $(".step").removeClass("active");
+    for (i = 1; i <= step; i++) {
+      $("#step-" + i).addClass("active");
+    }
+
+    // Clear error messages
+    $(".error-message").html("");
+
+    // Switch tab
+    $(".tab").css("display", "none");
+    $("#tab-" + step).css("display", "block");
+    $("input").css("background", "#fff");
+  }
+
