@@ -1,0 +1,8 @@
+.form-row-inner-bank {
+  display: flex;
+  align-items: center;
+}
+
+.form-row-inner-bank input[type="text"] {
+  margin-left: 10px;
+}

@@ -1,0 +1,31 @@
+.form-date {
+  display: flex;
+  align-items: center;
+}
+
+.form-field {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.large-date-picker {
+  width: 250px;
+  height: 40px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+.form-field:last-child {
+  margin-top: 10px;
+}

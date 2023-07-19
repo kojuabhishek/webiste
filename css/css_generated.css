@@ -1,4 +1,3 @@
-
 .tab {
   display: none;
 }
@@ -16,14 +15,14 @@
   align-items: center;
   width: 40px;
   height: 40px;
-  background-color: #ccc;
+  background-color: #1b1515;
   border-radius: 50%;
   cursor: pointer;
   position: relative;
 }
 
 .step.active {
-  background-color: #007bff;
+  background-color: #0a7ff3;
   color: #fff;
 }
 
@@ -42,7 +41,7 @@
 }
 
 .step.active:after {
-  background-color: #007bff;
+  background-color: #3615ca;
 }
 
 input {

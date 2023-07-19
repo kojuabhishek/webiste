@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/css_generated.css" />
     <link rel="stylesheet" href="css/personaldetails.css" />
+    
+</head>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
@@ -48,7 +50,7 @@
           <!--First Row-->
           <div class="row">
             <div class="col">
-              <label for="firstname">First Name:</label>
+              <label for="firstname">First Name:*</label>
               <input
                 type="text"
                 id="firstname"
@@ -68,7 +70,7 @@
               />
             </div>
             <div class="col">
-              <label for="lastname">Last Name:</label>
+              <label for="lastname">Last Name:*</label>
               <input
                 type="text"
                 id="lastname"
@@ -83,27 +85,29 @@
           <!--Second Row-->
           <div class="row">
             <div class="col">
-              <label for="firstname">First Name:</label>
+              <label for="mobile">Mobile No:*</label>
               <input
                 type="text"
-                id="firstname"
-                placeholder="First Name"
-                name="firstname"
+                id="mobile"
+                placeholder="mobile"
+                name="mobile"
                 required
               />
-              <span class="error-message" id="firstname-error"></span>
+              <span class="error-message" id="mobile-error"></span>
             </div>
             <div class="col">
-              <label for="middlename">Middle Name:</label>
+              <label for="email">Email:*</label>
               <input
                 type="text"
-                id="middlename"
-                placeholder="Middle Name"
-                name="middlename"
+                id="email"
+                placeholder="Email"
+                name="email"
+                required
               />
+              <span class="error-message" id="email-error"></span>
             </div>
             <div class="col">
-              <label for="lastname">Last Name:</label>
+              <label for="lastname">Last Name:*</label>
               <input
                 type="text"
                 id="lastname"
@@ -118,218 +122,178 @@
           <!--Third Row-->
           <div class="row">
             <div class="col">
-              <label for="firstname">First Name:</label>
-              <input
-                type="text"
-                id="firstname"
-                placeholder="First Name"
-                name="firstname"
-                required
-              />
-              <span class="error-message" id="firstname-error"></span>
+              <label for="dob-bs">Date of Birth B.S:</label>
+              <input type="date" id="dob-bs" name="dob-bs" required />
+              <span class="error-message" id="dob-bs-error"></span>
             </div>
             <div class="col">
-              <label for="middlename">Middle Name:</label>
-              <input
-                type="text"
-                id="middlename"
-                placeholder="Middle Name"
-                name="middlename"
-              />
-            </div>
-            <div class="col">
-              <label for="lastname">Last Name:</label>
-              <input
-                type="text"
-                id="lastname"
-                placeholder="Last Name"
-                name="lastname"
-                required
-              />
-              <span class="error-message" id="lastname-error"></span>
+              <label for="dob-ad">Date of Birth A.D:</label>
+              <input type="date" id="dob-ad" name="dob-ad" required />
+              <span class="error-message" id="dob-ad-error"></span>
             </div>
           </div>
 
           <!--Fourth Row-->
+   
           <div class="row">
-            <div class="col">
-              <label for="firstname">First Name:</label>
-              <input
-                type="text"
-                id="firstname"
-                placeholder="First Name"
-                name="firstname"
-                required
-              />
-              <span class="error-message" id="firstname-error"></span>
+         
+            <div class="form-row">
+              <label>Gender:</label>
+              
+              <input type="radio" name="gender" value="male" />
+              <label>Male</label>
+              <input type="radio" name="gender" value="female" />
+              <label>Female</label>
+              <input type="radio" name="gender" value="other" />
+              <label>Other</label>
             </div>
-            <div class="col">
-              <label for="middlename">Middle Name:</label>
-              <input
-                type="text"
-                id="middlename"
-                placeholder="Middle Name"
-                name="middlename"
-              />
-            </div>
-            <div class="col">
-              <label for="lastname">Last Name:</label>
-              <input
-                type="text"
-                id="lastname"
-                placeholder="Last Name"
-                name="lastname"
-                required
-              />
-              <span class="error-message" id="lastname-error"></span>
-            </div>
-          </div>
 
+         
+          
+
+            <div class="form-row">
+         
+                <label for="nationality">Nationality:</label>
+              <select id="nationality" name="nationality">
+                <option value="nep">NEPAL</option>
+                <option value="usa">USA</option>
+                <option value="uk">UK</option>
+                <option value="canada">Canada</option>
+                <!-- Add more options as needed -->
+              </select>
+              </div>
+              
+            </div>
+     
+<br/>
           <!--Fifth Row-->
           <div class="row">
             <div class="col">
-              <label for="firstname">First Name:</label>
+              <label for="ctznNo">Citizenship No:*</label>
               <input
                 type="text"
-                id="firstname"
-                placeholder="First Name"
-                name="firstname"
+                id="ctznNo"
+                placeholder="Enter Citizenship Number"
+                name="ctznNo"
                 required
               />
-              <span class="error-message" id="firstname-error"></span>
+              <span class="error-message" id="ctznNo"></span>
             </div>
+            
             <div class="col">
-              <label for="middlename">Middle Name:</label>
-              <input
-                type="text"
-                id="middlename"
-                placeholder="Middle Name"
-                name="middlename"
-              />
-            </div>
-            <div class="col">
-              <label for="lastname">Last Name:</label>
-              <input
-                type="text"
-                id="lastname"
-                placeholder="Last Name"
-                name="lastname"
-                required
-              />
-              <span class="error-message" id="lastname-error"></span>
+           
+              <label for="ctznIssuedFrom">Citizenship Issued From:*</label>
+              
+              <select id="ctznIssuedFrom" name="ctznIssuedFrom">
+                <option value="ktm">Kathmandu</option>
+                <option value="bkt">Bhaktapur</option>
+                <option value="ltp">Lalitpur</option>
+                <!-- Add more options as needed -->
+              </select>
+
+             
+       
+              
+              <span class="error-message" id="ctznIssuedFrom"></span>
             </div>
           </div>
 
           <!--Sixth Row-->
           <div class="row">
             <div class="col">
-              <label for="firstname">First Name:</label>
-              <input
-                type="text"
-                id="firstname"
-                placeholder="First Name"
-                name="firstname"
-                required
-              />
-              <span class="error-message" id="firstname-error"></span>
+              <label for="dob-bs">Citizenship issued Date B.S:</label>
+              <input type="date" id="ctzn-bs" name="ctzn-bs" required />
+              <span class="error-message" id="ctzn-bs-error"></span>
             </div>
             <div class="col">
-              <label for="middlename">Middle Name:</label>
-              <input
-                type="text"
-                id="middlename"
-                placeholder="Middle Name"
-                name="middlename"
-              />
-            </div>
-            <div class="col">
-              <label for="lastname">Last Name:</label>
-              <input
-                type="text"
-                id="lastname"
-                placeholder="Last Name"
-                name="lastname"
-                required
-              />
-              <span class="error-message" id="lastname-error"></span>
+              <label for="dob-ad">Citizenship issed date A.D:</label>
+              <input type="date" id="ctzn-ad" name="ctzn-ad" required />
+              <span class="error-message" id="ctzn-ad-error"></span>
             </div>
           </div>
+
 
           <!--Seventh Row-->
           <div class="row">
             <div class="col">
-              <label for="firstname">First Name:</label>
+              <label for="firstname">Passport No:</label>
               <input
                 type="text"
-                id="firstname"
-                placeholder="First Name"
-                name="firstname"
-                required
+                id="passportNo"
+                placeholder="Passport Number"
+                name="passportNo"
+                
               />
               <span class="error-message" id="firstname-error"></span>
             </div>
             <div class="col">
-              <label for="middlename">Middle Name:</label>
-              <input
-                type="text"
-                id="middlename"
-                placeholder="Middle Name"
-                name="middlename"
-              />
+              <label for="passportIssuedFrom">Passport Issued From :</label>
+              <select id="passportIssuedFrom" name="passportIssuedFrom">
+                <option value="ktm">Kathmandu</option>
+                <option value="bkt">Bhaktapur</option>
+                <option value="ltp">Lalitpur</option>
+                <!-- Add more options as needed -->
+              </select>
+
             </div>
             <div class="col">
-              <label for="lastname">Last Name:</label>
-              <input
-                type="text"
-                id="lastname"
-                placeholder="Last Name"
-                name="lastname"
-                required
-              />
-              <span class="error-message" id="lastname-error"></span>
+              <label for="PassportissuedDate">Passport issued Date:</label>
+              <input type="date" id="PassportissuedDate" name="PassportissuedDate"  />
+              <span class="error-message" id="PassportissuedDate"></span>
             </div>
           </div>
 
           <!--Eigth Row-->
           <div class="row">
             <div class="col">
-              <label for="firstname">First Name:</label>
-              <input
-                type="text"
-                id="firstname"
-                placeholder="First Name"
-                name="firstname"
-                required
-              />
-              <span class="error-message" id="firstname-error"></span>
+              <label for="PassportExpiryDate">Passport issued Date:</label>
+              <input type="date" id="PassportExpiryDate" name="PassportExpiryDate"  />
+              <span class="error-message" id="PassportExpiryDate"></span>
             </div>
             <div class="col">
-              <label for="middlename">Middle Name:</label>
+              <label for="demay">Beneficiary No:*</label>
               <input
                 type="text"
-                id="middlename"
-                placeholder="Middle Name"
-                name="middlename"
-              />
-            </div>
-            <div class="col">
-              <label for="lastname">Last Name:</label>
-              <input
-                type="text"
-                id="lastname"
-                placeholder="Last Name"
-                name="lastname"
+                id="demat"
+                placeholder="Enter Demat Number"
+                name="demat"
                 required
               />
-              <span class="error-message" id="lastname-error"></span>
+              <span class="error-message" id="demat-error"></span>
+            </div>
+            <div class="col">
+              <label for="PAN">PAN No:</label>
+              <input
+                type="text"
+                id="pan"
+                placeholder="Enter PAN Number"
+                name="pan"
+                required
+              />
+              <span class="error-message" id="pan-error"></span>
             </div>
           </div>
         </div>
 
+        <br>
+        <br>
+
         <!--Family Details-->
-        <p>Family Details:</p>
         <div>
+        <p>Family Details:</p>
+        <!--FD first row-->
           <div class="row">
+            <div class="col">
+              <label for="grandfathername">Grandfather's Name:</label>
+              <input
+                type="text"
+                id="grandfathername"
+                placeholder="Grandfather's Name"
+                name="grandfathername"
+                required
+              />
+              <span class="error-message" id="grandfathername-error"></span>
+            </div>
             <div class="col">
               <label for="fathername">Father's Name:</label>
               <input
@@ -337,7 +301,9 @@
                 id="fathername"
                 placeholder="Father's Name"
                 name="fathername"
+                required
               />
+              <span class="error-message" id="mothername-error"></span>
             </div>
             <div class="col">
               <label for="mothername">Mother's Name:</label>
@@ -346,9 +312,55 @@
                 id="mothername"
                 placeholder="Mother's Name"
                 name="mothername"
+                required
               />
+              <span class="error-message" id="fathername-error"></span>
             </div>
           </div>
+
+          <br>
+          <br>
+           <!--FD second row-->
+           <div class="row">
+            <div class="col">
+            <label>Is Married?*</label>
+            <div class="form-row">
+              <div class="row">
+                <input type="radio" name="gender" value="unmarried" />
+                <label>Unmarried</label>
+                <input type="radio" name="gender" value="married" />
+                <label>Married</label>
+                <input type="radio" name="gender" value="other" />
+                <label>Other</label>
+
+              </div>
+            </div>
+          </div> 
+            </div>
+            
+            <br>
+            <br>
+
+                       <!--FD third row-->
+           <div class="row">
+            <div class="col">
+            <label>Is Minor?*</label>
+            <div class="form-row">
+              <div class="row">
+                <input type="radio" name="gender" value="yes" />
+                <label>Yes</label>
+                <input type="radio" name="gender" value="no" />
+                <label>No</label>
+                
+
+              </div>
+            </div>
+          </div> 
+            </div>
+          
+            
+            
+              
         </div>
 
         <div class="index-btn-wrapper">
@@ -419,45 +431,9 @@
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
-    <script>
-      // Default tab
-      $(".tab").css("display", "none");
-      $("#tab-1").css("display", "block");
-      $("#step-1").addClass("active");
-
-      function navigateToStep(step) {
-        // Validate if press next button
-        if (step > 1) {
-          var currentTab = step - 1;
-          x = $("#tab-" + currentTab);
-          y = $(x).find("input[required]");
-          var errorMessages = "";
-          for (i = 0; i < y.length; i++) {
-            if (y[i].value == "") {
-              var fieldName = $(y[i]).attr("name");
-              $("#" + fieldName + "-error").html(fieldName + " is required.");
-              errorMessages += fieldName + " is required.<br>";
-            }
-          }
-          if (errorMessages !== "") {
-            return false;
-          }
-        }
-
-        // Progress bar
-        $(".step").removeClass("active");
-        for (i = 1; i <= step; i++) {
-          $("#step-" + i).addClass("active");
-        }
-
-        // Clear error messages
-        $(".error-message").html("");
-
-        // Switch tab
-        $(".tab").css("display", "none");
-        $("#tab-" + step).css("display", "block");
-        $("input").css("background", "#fff");
-      }
-    </script>
+    <script src="js/script.js"></script>
+    <script src="js/personaldetails.js"></script>
+    <script src="js/addressdetails.js"></script>
+    <script src="js/moneylaunder.js"></script>
   </body>
 </html>

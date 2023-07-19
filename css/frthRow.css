@@ -1,0 +1,35 @@
+.form-row4 {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-group4 {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .gender-label {
+    font-size: 16px;
+  }
+  
+  .radio-group {
+    display: flex;
+    align-items: flex-end;
+    gap: 5px;
+  }
+  
+  .gender-option {
+    font-size: 14px;
+  }
+  
+  .gender-label {
+    font-size: 16px;
+    margin-right: 10px; /* Add margin to the right of the label */
+  }
+  
+  .nationality-label {
+    font-size: 16px;
+    margin-left: 20px; /* Add margin to the left of the label */
+  }
+  

@@ -1,0 +1,46 @@
+/* Add some padding and background color to the form row */
+.abroad-form-row {
+  padding: 10px;
+  background-color: #f2f2f2;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/* Style the form labels */
+.label {
+  font-weight: bold;
+}
+
+/* Style the form controls */
+.form-control {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* Adjust the layout of the form holders */
+.abroad-form-holder {
+  flex: 1;
+  margin-right: 10px;
+}
+
+.abroad-form-holder-2 {
+  margin-right: 0;
+}
+
+/* Add some margin between form rows */
+.my-3 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .abroad-form-holder {
+    flex-basis: 100%;
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}

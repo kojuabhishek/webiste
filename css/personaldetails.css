@@ -8,3 +8,12 @@
   flex: 1;
   margin-right: 10px;
 }
+
+.form-row {
+  display: flex;
+  align-items: center;
+}
+
+.form-row label {
+  margin-right: 10px;
+}
