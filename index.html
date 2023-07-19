@@ -1026,7 +1026,9 @@
         
 
         </div>
-
+        
+        <br>
+        <br>
         <!--Fourth Row-->
         <label>Involved in Investment Companies Which Are Established For Securities Trading?*:</label>
         <div class="row">
@@ -1099,6 +1101,204 @@
 
       <div class="tab" id="tab-6">
         <p>Money Laundering Details:</p>
+        <br>
+        <!--fIRST rOW-->
+        <div class="row">
+          <div class="col">
+          <label for="isPolitician">Are you politician or a High Ranking Official?*</label>
+          <div class="form-row">
+            <div class="row">
+              <input type="radio" name="isPolitician" value="yes"   />
+              <label>Yes</label>
+              <input type="radio" name="isPolitician" value="no"  />
+              <label>No</label>
+             
+
+            </div>
+          </div>
+        </div> 
+          </div>
+       
+          <br>
+          <!--Second Row-->
+          <div class="row">
+            <div class="col">
+            <label for="related">Are You Related To A Politician or a High Ranking Official?*</label>
+            <div class="form-row">
+              <div class="row">
+                <input
+                type="radio"
+                name="related"
+                value="yes"
+                checked
+                class="radio-1"
+                style="margin-right: 10px"
+                onclick="showDetailsHighRank()"
+              />
+              Yes
+              <input
+                type="radio"
+                name="related"
+                value="no"
+                style="margin-left: 50px"
+                onclick="hideDetailsHighRank()"
+              />
+              No
+
+              </div>
+            </div>
+          </div> 
+            </div>
+             
+        <div class="row" id="secondRowHighRank">
+          <div class="col">
+            <label for="relatedPolitician">Name of Concerned Politician or High Ranking Official:</label>
+            <input
+              type="text"
+              id="relatedPolitician"
+              placeholder="Enter Name"
+              name="relatedPolitician"
+              required
+            />
+            <span class="error-message" id="relatedPolitician"></span>
+          </div>
+       
+          <div class="col">
+            <label for="relationshipPolitical">Relationship:*</label>
+            <div class="d">
+              <select id="relationshipPolitical" name="relationshipPolitical" required>
+                <option value="">Select Relationship</option>
+                <option value="father">Father</option>
+                <option value="mother">Mother</option>
+                
+                <!-- Add more options as needed -->
+              </select>
+            </div>
+            <span class="error-message" id="relationshipPolitical"></span>
+          </div>
+          
+        
+
+        </div>
+
+        <br>
+        <!--Third Row-->
+        <div class="row">
+          <div class="col">
+          <label for="beneficiary">Do You Have A Beneficiary?*</label>
+          <div class="form-row">
+            <div class="row">
+              <input
+              type="radio"
+              name="beneficiary"
+              value="yes"
+              checked
+              class="radio-1"
+              style="margin-right: 10px"
+              onclick="showDetailsBeneficiary()"
+            />
+            Yes
+            <input
+              type="radio"
+              name="beneficiary"
+              value="no"
+              style="margin-left: 50px"
+              onclick="hideDetailsBeneficiary()"
+            />
+            No
+
+            </div>
+          </div>
+        </div> 
+          </div>
+           
+      <div class="row" id="thirdRowBeneficiary">
+        <div class="col">
+          <label for="beneficiaryName">Beneficiary Name:*</label>
+          <input
+            type="text"
+            id="beneficiaryName"
+            placeholder="Enter Name"
+            name="beneficiaryName"
+            required
+          />
+          <span class="error-message" id="relatedPolitician"></span>
+        </div>
+     
+        <div class="col">
+          <label for="relationshipbeneficiary">Relationship:*</label>
+          <div class="d">
+            <select id="relationshipbeneficiary" name="relationshipbeneficiary" required>
+              <option value="">Select Relationship</option>
+              <option value="father">Father</option>
+              <option value="mother">Mother</option>
+              
+              <!-- Add more options as needed -->
+            </select>
+          </div>
+          <span class="error-message" id="relationshipPolitical-error"></span>
+        </div>
+        
+      
+
+      </div>
+
+      <br>
+       <!--Fourth Row-->
+       <div class="row">
+        <div class="col">
+        <label for="felony">Have You Been Convicted Of A Felony In The Past?*</label>
+        <div class="form-row">
+          <div class="row">
+            <input
+            type="radio"
+            name="felony"
+            value="yes"
+            checked
+            class="radio-1"
+            style="margin-right: 10px"
+            onclick="showDetailsFelony()"
+          />
+          Yes
+          <input
+            type="radio"
+            name="felony"
+            value="no"
+            style="margin-left: 50px"
+            onclick="hideDetailsFelony()"
+          />
+          No
+
+          </div>
+        </div>
+      </div> 
+        </div>
+         
+    <div class="row" id="fourthRowFelony">
+      <div class="col">
+        <label for="felonyName">Offenses as per clause of section 2 of Money Laundering
+          Prevention Act, 2064*</label>
+        <input
+          type="text"
+          id="felonyName"
+          placeholder="Enter Offesne Act"
+          name="felonyName"
+          required
+        />
+        <span class="error-message" id="felonyName-error"></span>
+      </div>
+   
+     
+      
+    
+
+    </div>
+
+
+       
+
+        
+
         <!-- Add fields for money laundering details -->
         <div class="index-btn-wrapper">
           <div class="index-btn" onclick="navigateToStep(5)">Previous</div>
