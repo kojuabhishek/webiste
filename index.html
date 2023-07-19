@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <title>Multi Step Form</title>
+    <title>KYC- Sun Securities</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -43,8 +43,10 @@
         ></span>
       </div>
 
+      <br>
+
       <div class="tab" id="tab-1">
-        <p>Personal Details:</p>
+        <h1>Personal Details:</h1>
 
         <div>
           <!--First Row-->
@@ -137,24 +139,27 @@
    
           <div class="row">
          
-            <div class="form-row">
+            <div class="col ">
+              
               <label>Gender:</label>
-             
-              <input type="radio" name="gender" value="male" />
+              <div class="x">
+             <div class="f form-row">
+              <input type="radio" name="gender" value="male"  class="f"/>
               <label>Male</label>
-              <input type="radio" name="gender" value="female" />
+              <input type="radio" name="gender" value="female" class="f" />
               <label>Female</label>
-              <input type="radio" name="gender" value="other" />
+              <input type="radio" name="gender" value="other" class="f"/>
               <label>Other</label>
-            </div>
+            </div></div>
 
-         
+         </div>
           
 
-            <div class="form-row">
+            <div class="col">
          
                 <label for="nationality">Nationality:</label>
-              <select id="nationality" name="nationality">
+                <div class="e ">
+              <select id="nationality" class="custumboxsize" name="nationality">
                 <option value="nep">NEPAL</option>
                 <option value="usa">USA</option>
                 <option value="uk">UK</option>
@@ -162,9 +167,9 @@
                 <!-- Add more options as needed -->
               </select>
               </div>
-              
             </div>
-     
+            </div>
+     </div>
 <br/>
           <!--Fifth Row-->
           <div class="row">
@@ -183,8 +188,8 @@
             <div class="col">
            
               <label for="ctznIssuedFrom laa">Citizenship Issued From:*</label>
-              <div class="d">
-              <select id="ctznIssuedFrom" name="ctznIssuedFrom">
+              <div class="e">
+              <select id="ctznIssuedFrom" class="custumboxsize" name="ctznIssuedFrom">
                 <option value="ktm">Kathmandu</option>
                 <option value="bkt">Bhaktapur</option>
                 <option value="ltp">Lalitpur</option>
@@ -228,8 +233,8 @@
             </div>
             <div class="col">
               <label for="passportIssuedFrom">Passport Issued From :</label>
-              <div class="d">
-              <select id="passportIssuedFrom" name="passportIssuedFrom">
+              <div class="e">
+              <select id="passportIssuedFrom" class="custumboxsize " name="passportIssuedFrom">
                 <option value="ktm">Kathmandu</option>
                 <option value="bkt">Bhaktapur</option>
                 <option value="ltp">Lalitpur</option>
@@ -435,7 +440,7 @@
       </div>
 
       <div class="tab" id="tab-2">
-        <p>Abroad Residence Details:</p>
+        <h1>Abroad Residence Details:</h1>
                     <!--FD third row-->
                     <label>Are you Non Resident Nepalese?*:</label>
                     <div class="row">
@@ -550,7 +555,7 @@
       </div>
 
       <div class="tab" id="tab-3">
-        <p>Address Details:</p>
+        <h1>Address Details:</h1>
 
         <h3>Permanent Address:</h3>
 
@@ -839,7 +844,7 @@
       </div>
 
       <div class="tab" id="tab-4">
-        <p>Bank Details:</p>
+        <h1>Bank Details:</h1>
 
         <div class="row">
           <div class="col">
@@ -909,7 +914,7 @@
       </div>
 
       <div class="tab" id="tab-5">
-        <p>Occupation Details:</p>
+        <h1>Occupation Details:</h1>
 
         <!--First Row-->
         <div class="row">
@@ -1100,7 +1105,7 @@
       </div>
 
       <div class="tab" id="tab-6">
-        <p>Money Laundering Details:</p>
+        <h1>Money Laundering Details:</h1>
         <br>
         <!--fIRST rOW-->
         <div class="row">
@@ -1307,7 +1312,7 @@
       </div>
 
       <div class="tab" id="tab-7">
-        <p>Documentation Details:</p>
+        <h1>Documentation Details:</h1>
         <div class="row">
           <div class="col">
             <label for="photo">PP Size Photo:*</label>
