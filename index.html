@@ -7,6 +7,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
     />
+    <link href="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/css/nepali.datepicker.v4.0.1.min.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/css_generated.css" />
     <link rel="stylesheet" href="css/personaldetails.css" />
@@ -123,16 +124,23 @@
 
           <!--Third Row-->
           <div class="row">
-            <div class="col">
+           <!-- <div class="col">
               <label for="dob-bs">Date of Birth B.S:</label>
               <input type="date" id="dob-bs" name="dob-bs" required />
               <span class="error-message" id="dob-bs-error"></span>
+            </div>-->
+            <div class="col">
+              <label for="dob-bs">Date of Birth B.S:</label>
+                <input type="text" id="dob-bs" placeholder="Select Nepali Date" onclick="dobDatePicker()" required/>
+                <span class="error-message" id="dob-bs-error"></span>
+            
             </div>
             <div class="col">
               <label for="dob-ad">Date of Birth A.D:</label>
               <input type="date" id="dob-ad" name="dob-ad" required />
               <span class="error-message" id="dob-ad-error"></span>
             </div>
+            
           </div>
 
           <!--Fourth Row-->
@@ -205,10 +213,16 @@
 
           <!--Sixth Row-->
           <div class="row">
-            <div class="col">
+            <!--<div class="col">
               <label for="dob-bs">Citizenship issued Date B.S:</label>
               <input type="date" id="ctzn-bs" name="ctzn-bs" required />
               <span class="error-message" id="ctzn-bs-error"></span>
+            </div>-->
+            <div class="col">
+              <label for="ctzn-bs">Citizenship issed date B.S:</label>
+                <input type="text" id="ctzn-bs" placeholder="Select Nepali Date" onclick="ctznDatePicker()" required/>
+                <span class="error-message" id="ctzn-bs-error"></span>
+            
             </div>
             <div class="col">
               <label for="dob-ad">Citizenship issed date A.D:</label>
@@ -286,7 +300,7 @@
 
         <!--Family Details-->
         <div>
-        <p>Family Details:</p>
+        <h2>Family Details:</h2>
         <!--FD first row-->
           <div class="row">
             <div class="col">
@@ -440,7 +454,7 @@
           <div class="index-btn" onclick="navigateToStep(2)">Next</div>
         </div>
       </div>
-    </div>
+
 
       <div class="tab" id="tab-2">
         <h1>Abroad Residence Details:</h1>
@@ -1420,9 +1434,19 @@
     </form>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+<script src="http://nepalidatepicker.sajanmaharjan.com.np/nepali.datepicker/js/nepali.datepicker.v4.0.1.min.js" type="text/javascript"></script>
+
+
+<script>
+  
+</script>
+
+
+    <script src="js/dobJS.js"></script>
     <script src="js/script.js"></script>
     <script src="js/personaldetails.js"></script>
     <script src="js/addressdetails.js"></script>
     <script src="js/moneylaunder.js"></script>
+    <script src="https://unpkg.com/dateconverter/build/dateconverter.dist.js"></script>
   </body>
 </html>
